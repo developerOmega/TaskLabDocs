@@ -1,0 +1,53 @@
+
+.text {
+  word-spacing: 1px;
+  line-height: 20pt;
+  color: $black;
+}
+
+.text-size-12 {
+  font-size: 12px !important;
+}
+
+.text-size-15 {
+  font-size: 15px !important;
+}
+
+.title {
+  color: $primary;
+}
+
+.font-monospace {
+  font-family: monospace; 
+}
+
+.medium-title {
+  color: $black;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.small-title {
+  color: $link;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.bold {
+  font-weight: bold
+}
+
+.bold-200 {
+  font-weight: 300;
+}
+
+.link {
+  text-decoration: none;
+  border: none;
+  background: transparent;
+  color: $link;
+  cursor: pointer;
+  &:hover {
+    color: $primary;
+  }
+}

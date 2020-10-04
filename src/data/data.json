@@ -1,0 +1,29 @@
+[
+  {
+    "name": "Admin login",
+    "link": "/api/v1/login/admin",
+    "description": "Autenticar administrador; Permiso: Todos",
+    "type": "POST",
+    "body": [
+      ["email", "name@email.com"],
+      ["password", "password123"]
+    ],
+    "headers": [
+      ["Content-Type", "application/json"]
+    ],
+    "json": {
+      "ok": true,
+      "admin": {
+        "id": "INTEGER",
+        "name": "STRING",
+        "email": "STRING",
+        "password": "STRING BCRYP",
+        "superAdmin": "BOOLEAN",
+        "createdAt": "DATE",
+        "updatedAt": "DATE"
+      },
+      "token": "STRING TOKEN"
+    }
+  }
+
+]
