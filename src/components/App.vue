@@ -2,7 +2,7 @@
   <div class="container">
     <header>
       <nav class="background-black">
-        <div class="logo bold-200"> API Documentation / DStore </div> 
+        <div class="logo bold-200"> API Documentation / TaskLab </div> 
       </nav>
 
       <div class="info">

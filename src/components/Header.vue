@@ -14,9 +14,9 @@
     name: "Header",
     data () {
       return {
-        title: 'DStore',
-        description: "Dstore es un API desarrollado para controlar las funciones de una tienda departamental; el sistema es capas de almacenar usuarios, productos, marcas y tickets. Los clientes podar hacer peticiones siempre y cuando estén autenticados como Administradores o Usuarios; este ultimo solo tendrá acceso a la vista de la información con excepción de los tickets que podrá generar siempre y cuando realice una compra.",
-        url: "https://d-store-dev-omega.herokuapp.com"
+        title: 'TaskLab',
+        description: "TaskLab es un API desarrollado para controlar las funciones de un sistema gestor de proyectos; La app puede controlar la organización de un equipo de trabajo, por ejemplo: almacenamiento de tareas , agendar eventos y la interaccione de usuarios mediante un chat (mensajes).",
+        url: "https://github.com/developerOmega/TaskLab"
       }
     }
   }

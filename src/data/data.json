@@ -222,7 +222,7 @@
       ["user_id", "mainImage.jpg"]
     ],
     "headers": [
-      ["Content-Type", "application/json"],
+      ["Content-Type", "multipart/form-data"],
       ["Authorization", "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjo2LCJ1cGRhdGVkX2F0IjoiMjAyMC0xMC0wNFQyMjowMDozMi4wNTdaIiwiY3JlYXRlZF9hdCI6IjIwMjAtMTAtMDRUMjI6MDA6MzIuMDU3WiIsIm5hbWUiOiJUeWxlciBEdXJkZW4iLCJlbWFpbCI6InRyYXZpc0BlbWFpbC5jb20iLCJwYXNzd29yZCI6IiQyYiQxMCQ5SndndVNsSC9TY09PbW1yeEovMExPOHBFR2FYWlhHenIxWVFaL2JhbmphRllLR3QuWVVJTyIsImltZyI6Ii9pbWFnZXMvZGVmYXVsdC5wbmciLCJ2ZXJpZnkiOnRydWUsImFjdGl2ZSI6dHJ1ZX0sImlhdCI6MTYwMTg0ODk2MSwiZXhwIjoxNjAyMDIxNzYxLCJhdWQiOiJodHRwOi8vbXlzb2Z0Y29ycC5pbiIsImlzcyI6Ik15c29mdCBjb3JwIiwic3ViIjoic29tZUB1c2VyLmNvbSJ9.LgE6OpCK5bJgEPGMwgEgYtjQ-_-xp5Gax53PSL2TuwBsJWynrM_ucwduGnIFbG4lfHK5_NOSG8LZIjgk1BE4Ng"]
     ],
     "json": {
@@ -240,6 +240,634 @@
       },
       "message": "Se actualizo la imagen"
     }
+  },
+  {
+    "name": "Todos los users",
+    "link": "/api/v1/users?init=:init&end=:end",
+    "description": "Mostrar todos los usuarios, init y end son opcionales; Permisos: Usuarios autenticados",
+    "type": "GET",
+    "body": [],
+    "headers": [
+      ["Authorization", "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjo2LCJ1cGRhdGVkX2F0IjoiMjAyMC0xMC0wNFQyMjowMDozMi4wNTdaIiwiY3JlYXRlZF9hdCI6IjIwMjAtMTAtMDRUMjI6MDA6MzIuMDU3WiIsIm5hbWUiOiJUeWxlciBEdXJkZW4iLCJlbWFpbCI6InRyYXZpc0BlbWFpbC5jb20iLCJwYXNzd29yZCI6IiQyYiQxMCQ5SndndVNsSC9TY09PbW1yeEovMExPOHBFR2FYWlhHenIxWVFaL2JhbmphRllLR3QuWVVJTyIsImltZyI6Ii9pbWFnZXMvZGVmYXVsdC5wbmciLCJ2ZXJpZnkiOnRydWUsImFjdGl2ZSI6dHJ1ZX0sImlhdCI6MTYwMTg0ODk2MSwiZXhwIjoxNjAyMDIxNzYxLCJhdWQiOiJodHRwOi8vbXlzb2Z0Y29ycC5pbiIsImlzcyI6Ik15c29mdCBjb3JwIiwic3ViIjoic29tZUB1c2VyLmNvbSJ9.LgE6OpCK5bJgEPGMwgEgYtjQ-_-xp5Gax53PSL2TuwBsJWynrM_ucwduGnIFbG4lfHK5_NOSG8LZIjgk1BE4Ng"]
+    ],
+    "json": {
+      "ok": true,
+      "data": [
+        {
+          "id": "INTEGER",
+          "name": "STRING",
+          "email": "STRING",
+          "password": "STRING BCRYP",
+          "img": "STRING",
+          "verify": "BOOLEAN",
+          "active": "BOOLEAN",
+          "updated_at": "DATE",
+          "created_at": "DATE"
+        }
+      ]
+    }
+  },
+  {
+    "name": "Todos los users",
+    "link": "/api/v1/users?init=:init&end=:end",
+    "description": "Mostrar todos los usuarios, init y end son opcionales; Permisos: Usuarios autenticados",
+    "type": "GET",
+    "body": [],
+    "headers": [
+      ["Authorization", "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjo2LCJ1cGRhdGVkX2F0IjoiMjAyMC0xMC0wNFQyMjowMDozMi4wNTdaIiwiY3JlYXRlZF9hdCI6IjIwMjAtMTAtMDRUMjI6MDA6MzIuMDU3WiIsIm5hbWUiOiJUeWxlciBEdXJkZW4iLCJlbWFpbCI6InRyYXZpc0BlbWFpbC5jb20iLCJwYXNzd29yZCI6IiQyYiQxMCQ5SndndVNsSC9TY09PbW1yeEovMExPOHBFR2FYWlhHenIxWVFaL2JhbmphRllLR3QuWVVJTyIsImltZyI6Ii9pbWFnZXMvZGVmYXVsdC5wbmciLCJ2ZXJpZnkiOnRydWUsImFjdGl2ZSI6dHJ1ZX0sImlhdCI6MTYwMTg0ODk2MSwiZXhwIjoxNjAyMDIxNzYxLCJhdWQiOiJodHRwOi8vbXlzb2Z0Y29ycC5pbiIsImlzcyI6Ik15c29mdCBjb3JwIiwic3ViIjoic29tZUB1c2VyLmNvbSJ9.LgE6OpCK5bJgEPGMwgEgYtjQ-_-xp5Gax53PSL2TuwBsJWynrM_ucwduGnIFbG4lfHK5_NOSG8LZIjgk1BE4Ng"]
+    ],
+    "json": {
+      "ok": true,
+      "data": [
+        {
+          "id": "INTEGER",
+          "name": "STRING",
+          "email": "STRING",
+          "password": "STRING BCRYP",
+          "img": "STRING",
+          "verify": "BOOLEAN",
+          "active": "BOOLEAN",
+          "updated_at": "DATE",
+          "created_at": "DATE"
+        }
+      ]
+    }
+  },
+  {
+    "name": "User por id",
+    "link": "/api/v1/users/:id",
+    "description": "Mostrar usuarios por parametro id; Permisos: Usuarios autenticados",
+    "type": "GET",
+    "body": [],
+    "headers": [
+      ["Authorization", "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjo2LCJ1cGRhdGVkX2F0IjoiMjAyMC0xMC0wNFQyMjowMDozMi4wNTdaIiwiY3JlYXRlZF9hdCI6IjIwMjAtMTAtMDRUMjI6MDA6MzIuMDU3WiIsIm5hbWUiOiJUeWxlciBEdXJkZW4iLCJlbWFpbCI6InRyYXZpc0BlbWFpbC5jb20iLCJwYXNzd29yZCI6IiQyYiQxMCQ5SndndVNsSC9TY09PbW1yeEovMExPOHBFR2FYWlhHenIxWVFaL2JhbmphRllLR3QuWVVJTyIsImltZyI6Ii9pbWFnZXMvZGVmYXVsdC5wbmciLCJ2ZXJpZnkiOnRydWUsImFjdGl2ZSI6dHJ1ZX0sImlhdCI6MTYwMTg0ODk2MSwiZXhwIjoxNjAyMDIxNzYxLCJhdWQiOiJodHRwOi8vbXlzb2Z0Y29ycC5pbiIsImlzcyI6Ik15c29mdCBjb3JwIiwic3ViIjoic29tZUB1c2VyLmNvbSJ9.LgE6OpCK5bJgEPGMwgEgYtjQ-_-xp5Gax53PSL2TuwBsJWynrM_ucwduGnIFbG4lfHK5_NOSG8LZIjgk1BE4Ng"]
+    ],
+    "json": {
+      "ok": true,
+      "data": {
+        "id": "INTEGER",
+        "name": "STRING",
+        "email": "STRING",
+        "password": "STRING BCRYP",
+        "img": "STRING",
+        "verify": "BOOLEAN",
+        "active": "BOOLEAN",
+        "updated_at": "DATE",
+        "created_at": "DATE"
+      }
+    }
+  },
+  {
+    "name": "Todos los projects",
+    "link": "/api/v1/projects?init=:init&end=:end",
+    "description": "Mostrar todos los proyectos, init y end son opcionales; Permisos: Usuarios autenticados",
+    "type": "GET",
+    "body": [],
+    "headers": [
+      ["Authorization", "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjo2LCJ1cGRhdGVkX2F0IjoiMjAyMC0xMC0wNFQyMjowMDozMi4wNTdaIiwiY3JlYXRlZF9hdCI6IjIwMjAtMTAtMDRUMjI6MDA6MzIuMDU3WiIsIm5hbWUiOiJUeWxlciBEdXJkZW4iLCJlbWFpbCI6InRyYXZpc0BlbWFpbC5jb20iLCJwYXNzd29yZCI6IiQyYiQxMCQ5SndndVNsSC9TY09PbW1yeEovMExPOHBFR2FYWlhHenIxWVFaL2JhbmphRllLR3QuWVVJTyIsImltZyI6Ii9pbWFnZXMvZGVmYXVsdC5wbmciLCJ2ZXJpZnkiOnRydWUsImFjdGl2ZSI6dHJ1ZX0sImlhdCI6MTYwMTg0ODk2MSwiZXhwIjoxNjAyMDIxNzYxLCJhdWQiOiJodHRwOi8vbXlzb2Z0Y29ycC5pbiIsImlzcyI6Ik15c29mdCBjb3JwIiwic3ViIjoic29tZUB1c2VyLmNvbSJ9.LgE6OpCK5bJgEPGMwgEgYtjQ-_-xp5Gax53PSL2TuwBsJWynrM_ucwduGnIFbG4lfHK5_NOSG8LZIjgk1BE4Ng"]
+    ],
+    "json": {
+      "ok": true,
+      "data": [
+        {
+          "id": "INTEGER",
+          "name": "STRING",
+          "description": "STRING",
+          "status": "ENUM(finish, active, stop)",
+          "user_id": "INTEGER",
+          "updated_at": "DATE",
+          "created_at": "DATE"
+        }
+      ]
+    }
+  },
+  {
+    "name": "Project por id",
+    "link": "/api/v1/projects/:id",
+    "description": "Mostrar proyectos por parametro id; Permisos: Usuarios autenticados, Usuarios validados en proyecto",
+    "type": "GET",
+    "body": [],
+    "headers": [
+      ["Authorization", "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjo2LCJ1cGRhdGVkX2F0IjoiMjAyMC0xMC0wNFQyMjowMDozMi4wNTdaIiwiY3JlYXRlZF9hdCI6IjIwMjAtMTAtMDRUMjI6MDA6MzIuMDU3WiIsIm5hbWUiOiJUeWxlciBEdXJkZW4iLCJlbWFpbCI6InRyYXZpc0BlbWFpbC5jb20iLCJwYXNzd29yZCI6IiQyYiQxMCQ5SndndVNsSC9TY09PbW1yeEovMExPOHBFR2FYWlhHenIxWVFaL2JhbmphRllLR3QuWVVJTyIsImltZyI6Ii9pbWFnZXMvZGVmYXVsdC5wbmciLCJ2ZXJpZnkiOnRydWUsImFjdGl2ZSI6dHJ1ZX0sImlhdCI6MTYwMTg0ODk2MSwiZXhwIjoxNjAyMDIxNzYxLCJhdWQiOiJodHRwOi8vbXlzb2Z0Y29ycC5pbiIsImlzcyI6Ik15c29mdCBjb3JwIiwic3ViIjoic29tZUB1c2VyLmNvbSJ9.LgE6OpCK5bJgEPGMwgEgYtjQ-_-xp5Gax53PSL2TuwBsJWynrM_ucwduGnIFbG4lfHK5_NOSG8LZIjgk1BE4Ng"]
+    ],
+    "json": {
+      "ok": true,
+      "data": {
+        "id": "INTEGER",
+        "updated_at": "DATE",
+        "created_at": "DATE",
+        "name": "STRING",
+        "description": "STRING",
+        "status": "ENUM[active, finish, stop]",
+        "user_id": "INTEGER"
+      }
+    }
+  },
+  {
+    "name": "User de project",
+    "link": "/api/v1/projects/:id/user",
+    "description": "Mostrar creador de proyecto; Permisos: Usuarios autenticados",
+    "type": "GET",
+    "body": [],
+    "headers": [
+      ["Authorization", "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjo2LCJ1cGRhdGVkX2F0IjoiMjAyMC0xMC0wNFQyMjowMDozMi4wNTdaIiwiY3JlYXRlZF9hdCI6IjIwMjAtMTAtMDRUMjI6MDA6MzIuMDU3WiIsIm5hbWUiOiJUeWxlciBEdXJkZW4iLCJlbWFpbCI6InRyYXZpc0BlbWFpbC5jb20iLCJwYXNzd29yZCI6IiQyYiQxMCQ5SndndVNsSC9TY09PbW1yeEovMExPOHBFR2FYWlhHenIxWVFaL2JhbmphRllLR3QuWVVJTyIsImltZyI6Ii9pbWFnZXMvZGVmYXVsdC5wbmciLCJ2ZXJpZnkiOnRydWUsImFjdGl2ZSI6dHJ1ZX0sImlhdCI6MTYwMTg0ODk2MSwiZXhwIjoxNjAyMDIxNzYxLCJhdWQiOiJodHRwOi8vbXlzb2Z0Y29ycC5pbiIsImlzcyI6Ik15c29mdCBjb3JwIiwic3ViIjoic29tZUB1c2VyLmNvbSJ9.LgE6OpCK5bJgEPGMwgEgYtjQ-_-xp5Gax53PSL2TuwBsJWynrM_ucwduGnIFbG4lfHK5_NOSG8LZIjgk1BE4Ng"]
+    ],
+    "json": {
+      "ok": true,
+      "data": {
+        "id": "INTEGER",
+        "name": "STRING",
+        "email": "STRING",
+        "img": "STRING",
+        "verify": "BOOLEAN",
+        "active": "BOOLEAN",
+        "updated_at": "DATE",
+        "created_at": "DATE"
+      }
+    }
+  },
+  {
+    "name": "Users por project",
+    "link": "/api/v1/projects/:id/users",
+    "description": "Mostrar todos los usuarios que pertenecen a un proyecto; Permisos: Usuarios autenticados",
+    "type": "GET",
+    "body": [],
+    "headers": [
+      ["Authorization", "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjo2LCJ1cGRhdGVkX2F0IjoiMjAyMC0xMC0wNFQyMjowMDozMi4wNTdaIiwiY3JlYXRlZF9hdCI6IjIwMjAtMTAtMDRUMjI6MDA6MzIuMDU3WiIsIm5hbWUiOiJUeWxlciBEdXJkZW4iLCJlbWFpbCI6InRyYXZpc0BlbWFpbC5jb20iLCJwYXNzd29yZCI6IiQyYiQxMCQ5SndndVNsSC9TY09PbW1yeEovMExPOHBFR2FYWlhHenIxWVFaL2JhbmphRllLR3QuWVVJTyIsImltZyI6Ii9pbWFnZXMvZGVmYXVsdC5wbmciLCJ2ZXJpZnkiOnRydWUsImFjdGl2ZSI6dHJ1ZX0sImlhdCI6MTYwMTg0ODk2MSwiZXhwIjoxNjAyMDIxNzYxLCJhdWQiOiJodHRwOi8vbXlzb2Z0Y29ycC5pbiIsImlzcyI6Ik15c29mdCBjb3JwIiwic3ViIjoic29tZUB1c2VyLmNvbSJ9.LgE6OpCK5bJgEPGMwgEgYtjQ-_-xp5Gax53PSL2TuwBsJWynrM_ucwduGnIFbG4lfHK5_NOSG8LZIjgk1BE4Ng"]
+    ],
+    "json": {
+      "ok": true,
+      "data": [
+        {
+          "id": "INTEGER",
+          "name": "STRING",
+          "email": "STRING",
+          "img": "STRING",
+          "verify": "BOOLEAN",
+          "active": "BOOLEAN",
+          "updated_at": "DATE",
+          "created_at": "DATE"
+        }
+      ]
+    }
+  },
+  {
+    "name": "Events por project",
+    "link": "/api/v1/projects/:id/events",
+    "description": "Mostrar todos los eventos que pertenecen a un proyecto; Permisos: Usuarios autenticados, Usuarios validados en proyecto",
+    "type": "GET",
+    "body": [],
+    "headers": [
+      ["Authorization", "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjo2LCJ1cGRhdGVkX2F0IjoiMjAyMC0xMC0wNFQyMjowMDozMi4wNTdaIiwiY3JlYXRlZF9hdCI6IjIwMjAtMTAtMDRUMjI6MDA6MzIuMDU3WiIsIm5hbWUiOiJUeWxlciBEdXJkZW4iLCJlbWFpbCI6InRyYXZpc0BlbWFpbC5jb20iLCJwYXNzd29yZCI6IiQyYiQxMCQ5SndndVNsSC9TY09PbW1yeEovMExPOHBFR2FYWlhHenIxWVFaL2JhbmphRllLR3QuWVVJTyIsImltZyI6Ii9pbWFnZXMvZGVmYXVsdC5wbmciLCJ2ZXJpZnkiOnRydWUsImFjdGl2ZSI6dHJ1ZX0sImlhdCI6MTYwMTg0ODk2MSwiZXhwIjoxNjAyMDIxNzYxLCJhdWQiOiJodHRwOi8vbXlzb2Z0Y29ycC5pbiIsImlzcyI6Ik15c29mdCBjb3JwIiwic3ViIjoic29tZUB1c2VyLmNvbSJ9.LgE6OpCK5bJgEPGMwgEgYtjQ-_-xp5Gax53PSL2TuwBsJWynrM_ucwduGnIFbG4lfHK5_NOSG8LZIjgk1BE4Ng"]
+    ],
+    "json": {
+      "ok": true,
+      "data": [
+        {
+          "id": "INTEGER",
+          "name": "STRING",
+          "description": "STRING",
+          "time_init": "DATE",
+          "time_end": "DATE",
+          "project_id": "INTEGER",
+          "updated_at": "DATE",
+          "created_at": "DATE"
+        }
+      ] 
+    }
+  },
+  {
+    "name": "Messages por project",
+    "link": "/api/v1/projects/:id/users",
+    "description": "Mostrar todos los mensajes que pertenecen a un proyecto; Permisos: Usuarios autenticados, Usuarios validados en proyecto",
+    "type": "GET",
+    "body": [],
+    "headers": [
+      ["Authorization", "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjo2LCJ1cGRhdGVkX2F0IjoiMjAyMC0xMC0wNFQyMjowMDozMi4wNTdaIiwiY3JlYXRlZF9hdCI6IjIwMjAtMTAtMDRUMjI6MDA6MzIuMDU3WiIsIm5hbWUiOiJUeWxlciBEdXJkZW4iLCJlbWFpbCI6InRyYXZpc0BlbWFpbC5jb20iLCJwYXNzd29yZCI6IiQyYiQxMCQ5SndndVNsSC9TY09PbW1yeEovMExPOHBFR2FYWlhHenIxWVFaL2JhbmphRllLR3QuWVVJTyIsImltZyI6Ii9pbWFnZXMvZGVmYXVsdC5wbmciLCJ2ZXJpZnkiOnRydWUsImFjdGl2ZSI6dHJ1ZX0sImlhdCI6MTYwMTg0ODk2MSwiZXhwIjoxNjAyMDIxNzYxLCJhdWQiOiJodHRwOi8vbXlzb2Z0Y29ycC5pbiIsImlzcyI6Ik15c29mdCBjb3JwIiwic3ViIjoic29tZUB1c2VyLmNvbSJ9.LgE6OpCK5bJgEPGMwgEgYtjQ-_-xp5Gax53PSL2TuwBsJWynrM_ucwduGnIFbG4lfHK5_NOSG8LZIjgk1BE4Ng"]
+    ],
+    "json": {
+      "ok": true,
+      "data": [
+        {
+          "id": "INTEGER",
+          "content": "STRING",
+          "name": "STRING",
+          "email": "STRING",
+          "img": "STRING",
+          "updated_at": "DATA",
+          "created_at": "DATA"
+        }
+      ] 
+    }
+  },
+  {
+    "name": "Tasks por project",
+    "link": "/api/v1/projects/:id/tasks",
+    "description": "Mostrar todas las tareas que pertenecen a un proyecto; Permisos: Usuarios autenticados, Usuarios validados en proyecto",
+    "type": "GET",
+    "body": [],
+    "headers": [
+      ["Authorization", "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjo2LCJ1cGRhdGVkX2F0IjoiMjAyMC0xMC0wNFQyMjowMDozMi4wNTdaIiwiY3JlYXRlZF9hdCI6IjIwMjAtMTAtMDRUMjI6MDA6MzIuMDU3WiIsIm5hbWUiOiJUeWxlciBEdXJkZW4iLCJlbWFpbCI6InRyYXZpc0BlbWFpbC5jb20iLCJwYXNzd29yZCI6IiQyYiQxMCQ5SndndVNsSC9TY09PbW1yeEovMExPOHBFR2FYWlhHenIxWVFaL2JhbmphRllLR3QuWVVJTyIsImltZyI6Ii9pbWFnZXMvZGVmYXVsdC5wbmciLCJ2ZXJpZnkiOnRydWUsImFjdGl2ZSI6dHJ1ZX0sImlhdCI6MTYwMTg0ODk2MSwiZXhwIjoxNjAyMDIxNzYxLCJhdWQiOiJodHRwOi8vbXlzb2Z0Y29ycC5pbiIsImlzcyI6Ik15c29mdCBjb3JwIiwic3ViIjoic29tZUB1c2VyLmNvbSJ9.LgE6OpCK5bJgEPGMwgEgYtjQ-_-xp5Gax53PSL2TuwBsJWynrM_ucwduGnIFbG4lfHK5_NOSG8LZIjgk1BE4Ng"]
+    ],
+    "json": {
+      "ok": true,
+      "data": [
+        {
+          "id": "INTEGER",
+          "description": "STRING",
+          "status": "ENUM[fine, error, warning, none]",
+          "time_init": "DATE",
+          "time_end": "DATE",
+          "project_id": "INTEGER",
+          "updated_at": "DATE",
+          "created_at": "DATE"
+        }
+      ] 
+    }
+  },
+  {
+    "name": "Envent por id",
+    "link": "/api/v1/events/:id",
+    "description": "Mostrar todos los eventos por parametro id; Permisos: Usuarios autenticados, Usuarios validados en proyecto",
+    "type": "GET",
+    "body": [],
+    "headers": [
+      ["Authorization", "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjo2LCJ1cGRhdGVkX2F0IjoiMjAyMC0xMC0wNFQyMjowMDozMi4wNTdaIiwiY3JlYXRlZF9hdCI6IjIwMjAtMTAtMDRUMjI6MDA6MzIuMDU3WiIsIm5hbWUiOiJUeWxlciBEdXJkZW4iLCJlbWFpbCI6InRyYXZpc0BlbWFpbC5jb20iLCJwYXNzd29yZCI6IiQyYiQxMCQ5SndndVNsSC9TY09PbW1yeEovMExPOHBFR2FYWlhHenIxWVFaL2JhbmphRllLR3QuWVVJTyIsImltZyI6Ii9pbWFnZXMvZGVmYXVsdC5wbmciLCJ2ZXJpZnkiOnRydWUsImFjdGl2ZSI6dHJ1ZX0sImlhdCI6MTYwMTg0ODk2MSwiZXhwIjoxNjAyMDIxNzYxLCJhdWQiOiJodHRwOi8vbXlzb2Z0Y29ycC5pbiIsImlzcyI6Ik15c29mdCBjb3JwIiwic3ViIjoic29tZUB1c2VyLmNvbSJ9.LgE6OpCK5bJgEPGMwgEgYtjQ-_-xp5Gax53PSL2TuwBsJWynrM_ucwduGnIFbG4lfHK5_NOSG8LZIjgk1BE4Ng"]
+    ],
+    "json": {
+      "ok": true,
+      "data": [
+        {
+          "id": "INTEGER",
+          "updated_at": "DATE",
+          "created_at": "DATE",
+          "name": "STRING",
+          "description": "STRING",
+          "time_init": "DATE",
+          "time_end": "DATE",
+          "project_id": "INTEGER"
+        }
+      ] 
+    }
+  },
+  {
+    "name": "Taks por id",
+    "link": "/api/v1/tasks/:id",
+    "description": "Mostrar todas las tareas por parametro id; Permisos: Usuarios autenticados, Usuarios validados en proyecto",
+    "type": "GET",
+    "body": [],
+    "headers": [
+      ["Authorization", "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjo2LCJ1cGRhdGVkX2F0IjoiMjAyMC0xMC0wNFQyMjowMDozMi4wNTdaIiwiY3JlYXRlZF9hdCI6IjIwMjAtMTAtMDRUMjI6MDA6MzIuMDU3WiIsIm5hbWUiOiJUeWxlciBEdXJkZW4iLCJlbWFpbCI6InRyYXZpc0BlbWFpbC5jb20iLCJwYXNzd29yZCI6IiQyYiQxMCQ5SndndVNsSC9TY09PbW1yeEovMExPOHBFR2FYWlhHenIxWVFaL2JhbmphRllLR3QuWVVJTyIsImltZyI6Ii9pbWFnZXMvZGVmYXVsdC5wbmciLCJ2ZXJpZnkiOnRydWUsImFjdGl2ZSI6dHJ1ZX0sImlhdCI6MTYwMTg0ODk2MSwiZXhwIjoxNjAyMDIxNzYxLCJhdWQiOiJodHRwOi8vbXlzb2Z0Y29ycC5pbiIsImlzcyI6Ik15c29mdCBjb3JwIiwic3ViIjoic29tZUB1c2VyLmNvbSJ9.LgE6OpCK5bJgEPGMwgEgYtjQ-_-xp5Gax53PSL2TuwBsJWynrM_ucwduGnIFbG4lfHK5_NOSG8LZIjgk1BE4Ng"]
+    ],
+    "json": {
+      "ok": true,
+      "data": {
+        "id": "INTEGER",
+        "updated_at": "DATE",
+        "created_at": "DATE",
+        "description": "STRING",
+        "status": "ENUM[fine, error, warning, none]",
+        "project_id": "INTEGER"
+      }
+    }
+  },
+  {
+    "name": "Editar user",
+    "link": "/api/v1/users/:id",
+    "description": "Editar informacion de usuario; Permisos: Usuarios autenticados",
+    "type": "PUT",
+    "body": [
+      ["name", "Cornelius"]
+    ],
+    "headers": [
+      ["Content-Type", "application/json"],
+      ["Authorization", "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjo2LCJ1cGRhdGVkX2F0IjoiMjAyMC0xMC0wNFQyMjowMDozMi4wNTdaIiwiY3JlYXRlZF9hdCI6IjIwMjAtMTAtMDRUMjI6MDA6MzIuMDU3WiIsIm5hbWUiOiJUeWxlciBEdXJkZW4iLCJlbWFpbCI6InRyYXZpc0BlbWFpbC5jb20iLCJwYXNzd29yZCI6IiQyYiQxMCQ5SndndVNsSC9TY09PbW1yeEovMExPOHBFR2FYWlhHenIxWVFaL2JhbmphRllLR3QuWVVJTyIsImltZyI6Ii9pbWFnZXMvZGVmYXVsdC5wbmciLCJ2ZXJpZnkiOnRydWUsImFjdGl2ZSI6dHJ1ZX0sImlhdCI6MTYwMTg0ODk2MSwiZXhwIjoxNjAyMDIxNzYxLCJhdWQiOiJodHRwOi8vbXlzb2Z0Y29ycC5pbiIsImlzcyI6Ik15c29mdCBjb3JwIiwic3ViIjoic29tZUB1c2VyLmNvbSJ9.LgE6OpCK5bJgEPGMwgEgYtjQ-_-xp5Gax53PSL2TuwBsJWynrM_ucwduGnIFbG4lfHK5_NOSG8LZIjgk1BE4Ng"]
+    ],
+    "json": {
+      "ok": true,
+      "data": {
+        "id": "INTEGER",
+        "name": "STRING",
+        "email": "STRING",
+        "password": "STRING BCRYPT",
+        "img": "STRING",
+        "verify": "BOOLEAN",
+        "active": "BOOLEAN",
+        "updated_at": "DATE",
+        "created_at": "DATE"
+      }
+    }
+  },
+  {
+    "name": "Editar project",
+    "link": "/api/v1/projects/:id",
+    "description": "Editar informacion de proyecto; Permisos: Usuarios autenticados, Usuarios validados en proyecto, Usuarios administradores de proyecto",
+    "type": "PUT",
+    "body": [
+      ["name", "MusicApp"]
+    ],
+    "headers": [
+      ["Content-Type", "application/json"],
+      ["Authorization", "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjo2LCJ1cGRhdGVkX2F0IjoiMjAyMC0xMC0wNFQyMjowMDozMi4wNTdaIiwiY3JlYXRlZF9hdCI6IjIwMjAtMTAtMDRUMjI6MDA6MzIuMDU3WiIsIm5hbWUiOiJUeWxlciBEdXJkZW4iLCJlbWFpbCI6InRyYXZpc0BlbWFpbC5jb20iLCJwYXNzd29yZCI6IiQyYiQxMCQ5SndndVNsSC9TY09PbW1yeEovMExPOHBFR2FYWlhHenIxWVFaL2JhbmphRllLR3QuWVVJTyIsImltZyI6Ii9pbWFnZXMvZGVmYXVsdC5wbmciLCJ2ZXJpZnkiOnRydWUsImFjdGl2ZSI6dHJ1ZX0sImlhdCI6MTYwMTg0ODk2MSwiZXhwIjoxNjAyMDIxNzYxLCJhdWQiOiJodHRwOi8vbXlzb2Z0Y29ycC5pbiIsImlzcyI6Ik15c29mdCBjb3JwIiwic3ViIjoic29tZUB1c2VyLmNvbSJ9.LgE6OpCK5bJgEPGMwgEgYtjQ-_-xp5Gax53PSL2TuwBsJWynrM_ucwduGnIFbG4lfHK5_NOSG8LZIjgk1BE4Ng"]
+    ],
+    "json": {
+      "ok": true,
+      "data": {
+        "id": "INTEGER",
+        "name": "STRING",
+        "email": "STRING",
+        "password": "STRING BCRYPT",
+        "img": "STRING",
+        "verify": "BOOLEAN",
+        "active": "BOOLEAN",
+        "updated_at": "DATE",
+        "created_at": "DATE"
+      }
+    }
+  },
+  {
+    "name": "Editar message",
+    "link": "/api/v1/messages/:id",
+    "description": "Editar informacion de mensaje; Permisos: Usuarios autenticados, Usuarios validados en proyecto",
+    "type": "PUT",
+    "body": [
+      ["content", "Hay que trabajar Ahora :v"]
+    ],
+    "headers": [
+      ["Content-Type", "application/json"],
+      ["Authorization", "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjo2LCJ1cGRhdGVkX2F0IjoiMjAyMC0xMC0wNFQyMjowMDozMi4wNTdaIiwiY3JlYXRlZF9hdCI6IjIwMjAtMTAtMDRUMjI6MDA6MzIuMDU3WiIsIm5hbWUiOiJUeWxlciBEdXJkZW4iLCJlbWFpbCI6InRyYXZpc0BlbWFpbC5jb20iLCJwYXNzd29yZCI6IiQyYiQxMCQ5SndndVNsSC9TY09PbW1yeEovMExPOHBFR2FYWlhHenIxWVFaL2JhbmphRllLR3QuWVVJTyIsImltZyI6Ii9pbWFnZXMvZGVmYXVsdC5wbmciLCJ2ZXJpZnkiOnRydWUsImFjdGl2ZSI6dHJ1ZX0sImlhdCI6MTYwMTg0ODk2MSwiZXhwIjoxNjAyMDIxNzYxLCJhdWQiOiJodHRwOi8vbXlzb2Z0Y29ycC5pbiIsImlzcyI6Ik15c29mdCBjb3JwIiwic3ViIjoic29tZUB1c2VyLmNvbSJ9.LgE6OpCK5bJgEPGMwgEgYtjQ-_-xp5Gax53PSL2TuwBsJWynrM_ucwduGnIFbG4lfHK5_NOSG8LZIjgk1BE4Ng"]
+    ],
+    "json": {
+      "ok": true,
+      "data": {
+        "id": "INTEGER",
+        "content": "STRING",
+        "user_id": "INTEGER",
+        "project_id": "INTEGER",
+        "updated_at": "DATE",
+        "created_at": "DATE"
+      }
+    }
+  },
+  {
+    "name": "Editar event",
+    "link": "/api/v1/events/:id",
+    "description": "Editar informacion de evento; Permisos: Usuarios autenticados, Usuarios validados en proyecto, Usuarios administradores de proyecto",
+    "type": "PUT",
+    "body": [
+      ["name", "Final No.1"]
+    ],
+    "headers": [
+      ["Content-Type", "application/json"],
+      ["Authorization", "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjo2LCJ1cGRhdGVkX2F0IjoiMjAyMC0xMC0wNFQyMjowMDozMi4wNTdaIiwiY3JlYXRlZF9hdCI6IjIwMjAtMTAtMDRUMjI6MDA6MzIuMDU3WiIsIm5hbWUiOiJUeWxlciBEdXJkZW4iLCJlbWFpbCI6InRyYXZpc0BlbWFpbC5jb20iLCJwYXNzd29yZCI6IiQyYiQxMCQ5SndndVNsSC9TY09PbW1yeEovMExPOHBFR2FYWlhHenIxWVFaL2JhbmphRllLR3QuWVVJTyIsImltZyI6Ii9pbWFnZXMvZGVmYXVsdC5wbmciLCJ2ZXJpZnkiOnRydWUsImFjdGl2ZSI6dHJ1ZX0sImlhdCI6MTYwMTg0ODk2MSwiZXhwIjoxNjAyMDIxNzYxLCJhdWQiOiJodHRwOi8vbXlzb2Z0Y29ycC5pbiIsImlzcyI6Ik15c29mdCBjb3JwIiwic3ViIjoic29tZUB1c2VyLmNvbSJ9.LgE6OpCK5bJgEPGMwgEgYtjQ-_-xp5Gax53PSL2TuwBsJWynrM_ucwduGnIFbG4lfHK5_NOSG8LZIjgk1BE4Ng"]
+    ],
+    "json": {
+      "ok": true,
+      "data": {
+        "id": "INTEGER",
+        "name": "STRING",
+        "description": "STRING",
+        "time_init": "STRING",
+        "time_end": "STRING",
+        "project_id": "INTEGER",
+        "updated_at": "DATE",
+        "created_at": "DATE"
+      }
+    }
+  },
+  {
+    "name": "Editar task",
+    "link": "/api/v1/tasks/:id",
+    "description": "Editar informacion de tarea; Permisos: Usuarios autenticados, Usuarios validados en proyecto, Usuarios administradores de proyecto",
+    "type": "PUT",
+    "body": [
+      ["name", "Final No.1"]
+    ],
+    "headers": [
+      ["Content-Type", "application/json"],
+      ["Authorization", "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjo2LCJ1cGRhdGVkX2F0IjoiMjAyMC0xMC0wNFQyMjowMDozMi4wNTdaIiwiY3JlYXRlZF9hdCI6IjIwMjAtMTAtMDRUMjI6MDA6MzIuMDU3WiIsIm5hbWUiOiJUeWxlciBEdXJkZW4iLCJlbWFpbCI6InRyYXZpc0BlbWFpbC5jb20iLCJwYXNzd29yZCI6IiQyYiQxMCQ5SndndVNsSC9TY09PbW1yeEovMExPOHBFR2FYWlhHenIxWVFaL2JhbmphRllLR3QuWVVJTyIsImltZyI6Ii9pbWFnZXMvZGVmYXVsdC5wbmciLCJ2ZXJpZnkiOnRydWUsImFjdGl2ZSI6dHJ1ZX0sImlhdCI6MTYwMTg0ODk2MSwiZXhwIjoxNjAyMDIxNzYxLCJhdWQiOiJodHRwOi8vbXlzb2Z0Y29ycC5pbiIsImlzcyI6Ik15c29mdCBjb3JwIiwic3ViIjoic29tZUB1c2VyLmNvbSJ9.LgE6OpCK5bJgEPGMwgEgYtjQ-_-xp5Gax53PSL2TuwBsJWynrM_ucwduGnIFbG4lfHK5_NOSG8LZIjgk1BE4Ng"]
+    ],
+    "json": {
+      "ok": true,
+      "data": {
+        "id": "INTEGER",
+        "description": "STRING",
+        "status": "ENUM[fine, error, warning, none]",
+        "time_init": "DATE",
+        "time_end": "DATE",
+        "project_id": "INTEGER",
+        "updated_at": "DATE",
+        "created_at": "DATE"
+      }
+    }
+  },
+  {
+    "name": "Editar status de task",
+    "link": "/api/v1/tasks/:id/status",
+    "description": "Editar status de tarea; Permisos: Usuarios autenticados, Usuarios validados en proyecto, Usuarios validados en tarea",
+    "type": "PUT",
+    "body": [
+      ["status", "warning"]
+    ],
+    "headers": [
+      ["Content-Type", "application/json"],
+      ["Authorization", "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjo2LCJ1cGRhdGVkX2F0IjoiMjAyMC0xMC0wNFQyMjowMDozMi4wNTdaIiwiY3JlYXRlZF9hdCI6IjIwMjAtMTAtMDRUMjI6MDA6MzIuMDU3WiIsIm5hbWUiOiJUeWxlciBEdXJkZW4iLCJlbWFpbCI6InRyYXZpc0BlbWFpbC5jb20iLCJwYXNzd29yZCI6IiQyYiQxMCQ5SndndVNsSC9TY09PbW1yeEovMExPOHBFR2FYWlhHenIxWVFaL2JhbmphRllLR3QuWVVJTyIsImltZyI6Ii9pbWFnZXMvZGVmYXVsdC5wbmciLCJ2ZXJpZnkiOnRydWUsImFjdGl2ZSI6dHJ1ZX0sImlhdCI6MTYwMTg0ODk2MSwiZXhwIjoxNjAyMDIxNzYxLCJhdWQiOiJodHRwOi8vbXlzb2Z0Y29ycC5pbiIsImlzcyI6Ik15c29mdCBjb3JwIiwic3ViIjoic29tZUB1c2VyLmNvbSJ9.LgE6OpCK5bJgEPGMwgEgYtjQ-_-xp5Gax53PSL2TuwBsJWynrM_ucwduGnIFbG4lfHK5_NOSG8LZIjgk1BE4Ng"]
+    ],
+    "json": {
+      "ok": true,
+      "data": {
+        "id": "INTEGER",
+        "description": "STRING",
+        "status": "ENUM[fine, error, warning, none] UPDATE",
+        "time_init": "DATE",
+        "time_end": "DATE",
+        "project_id": "INTEGER",
+        "updated_at": "DATE",
+        "created_at": "DATE"
+      }
+    }
+  },
+  {
+    "name": "Editar img",
+    "link": "/api/v1/files/users/:id",
+    "description": "Actualizar archivo de tipo imagne a servidor Dropbox; Permisos: Usuarios autenticados; Extenciones de archivos: 'png', 'jpg', 'gif', 'jpeg' y 'JPEG'",
+    "type": "PUT",
+    "body": [
+      ["user_id", "mainImage.jpg"]
+    ],
+    "headers": [
+      ["Content-Type", "multipart/form-data"],
+      ["Authorization", "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjo2LCJ1cGRhdGVkX2F0IjoiMjAyMC0xMC0wNFQyMjowMDozMi4wNTdaIiwiY3JlYXRlZF9hdCI6IjIwMjAtMTAtMDRUMjI6MDA6MzIuMDU3WiIsIm5hbWUiOiJUeWxlciBEdXJkZW4iLCJlbWFpbCI6InRyYXZpc0BlbWFpbC5jb20iLCJwYXNzd29yZCI6IiQyYiQxMCQ5SndndVNsSC9TY09PbW1yeEovMExPOHBFR2FYWlhHenIxWVFaL2JhbmphRllLR3QuWVVJTyIsImltZyI6Ii9pbWFnZXMvZGVmYXVsdC5wbmciLCJ2ZXJpZnkiOnRydWUsImFjdGl2ZSI6dHJ1ZX0sImlhdCI6MTYwMTg0ODk2MSwiZXhwIjoxNjAyMDIxNzYxLCJhdWQiOiJodHRwOi8vbXlzb2Z0Y29ycC5pbiIsImlzcyI6Ik15c29mdCBjb3JwIiwic3ViIjoic29tZUB1c2VyLmNvbSJ9.LgE6OpCK5bJgEPGMwgEgYtjQ-_-xp5Gax53PSL2TuwBsJWynrM_ucwduGnIFbG4lfHK5_NOSG8LZIjgk1BE4Ng"]
+    ],
+    "json": {
+      "ok": true,
+      "data": {
+        "id": "INTEGER",
+        "name": "STRING",
+        "email": "STRING",
+        "password": "STRING BCTYPT",
+        "img": "STRING URL PUBLIC DROPBOX",
+        "verify": "BOOLEAN",
+        "active": "BOOLEAN",
+        "updated_at": "DATE",
+        "created_at": "DATE"
+      },
+      "message": "Se actualizo la imagen"
+    }
+  },
+  {
+    "name": "Editar password",
+    "link": "/api/v1/user/:id/password",
+    "description": "Editar password de usuario; Permisos: Usuarios autenticados",
+    "type": "PUT",
+    "body": [
+      ["old_password", "qwerty123"],
+      ["new_password", "password123"]
+    ],
+    "headers": [
+      ["Content-Type", "application/json"],
+      ["Authorization", "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjo2LCJ1cGRhdGVkX2F0IjoiMjAyMC0xMC0wNFQyMjowMDozMi4wNTdaIiwiY3JlYXRlZF9hdCI6IjIwMjAtMTAtMDRUMjI6MDA6MzIuMDU3WiIsIm5hbWUiOiJUeWxlciBEdXJkZW4iLCJlbWFpbCI6InRyYXZpc0BlbWFpbC5jb20iLCJwYXNzd29yZCI6IiQyYiQxMCQ5SndndVNsSC9TY09PbW1yeEovMExPOHBFR2FYWlhHenIxWVFaL2JhbmphRllLR3QuWVVJTyIsImltZyI6Ii9pbWFnZXMvZGVmYXVsdC5wbmciLCJ2ZXJpZnkiOnRydWUsImFjdGl2ZSI6dHJ1ZX0sImlhdCI6MTYwMTg0ODk2MSwiZXhwIjoxNjAyMDIxNzYxLCJhdWQiOiJodHRwOi8vbXlzb2Z0Y29ycC5pbiIsImlzcyI6Ik15c29mdCBjb3JwIiwic3ViIjoic29tZUB1c2VyLmNvbSJ9.LgE6OpCK5bJgEPGMwgEgYtjQ-_-xp5Gax53PSL2TuwBsJWynrM_ucwduGnIFbG4lfHK5_NOSG8LZIjgk1BE4Ng"]
+    ],
+    "json": {
+      "ok": true,
+      "data": {
+        "id": "INTEGER",
+        "name": "STRING",
+        "email": "STRING",
+        "password": "STRING BCRYPT",
+        "img": "STRING",
+        "verify": "STRING",
+        "active": "STRING",
+        "updated_at": "DATE",
+        "created_at": "DATE"
+      }
+    }
+  },
+  {
+    "name": "Eliminar user",
+    "link": "/api/v1/users/:id",
+    "description": "Eliminar registro de usuario; Permisos: Usuarios autenticados",
+    "type": "DELETE",
+    "body": [],
+    "headers": [
+      ["Authorization", "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjo2LCJ1cGRhdGVkX2F0IjoiMjAyMC0xMC0wNFQyMjowMDozMi4wNTdaIiwiY3JlYXRlZF9hdCI6IjIwMjAtMTAtMDRUMjI6MDA6MzIuMDU3WiIsIm5hbWUiOiJUeWxlciBEdXJkZW4iLCJlbWFpbCI6InRyYXZpc0BlbWFpbC5jb20iLCJwYXNzd29yZCI6IiQyYiQxMCQ5SndndVNsSC9TY09PbW1yeEovMExPOHBFR2FYWlhHenIxWVFaL2JhbmphRllLR3QuWVVJTyIsImltZyI6Ii9pbWFnZXMvZGVmYXVsdC5wbmciLCJ2ZXJpZnkiOnRydWUsImFjdGl2ZSI6dHJ1ZX0sImlhdCI6MTYwMTg0ODk2MSwiZXhwIjoxNjAyMDIxNzYxLCJhdWQiOiJodHRwOi8vbXlzb2Z0Y29ycC5pbiIsImlzcyI6Ik15c29mdCBjb3JwIiwic3ViIjoic29tZUB1c2VyLmNvbSJ9.LgE6OpCK5bJgEPGMwgEgYtjQ-_-xp5Gax53PSL2TuwBsJWynrM_ucwduGnIFbG4lfHK5_NOSG8LZIjgk1BE4Ng"]
+    ],
+    "json": {
+      "ok": true,
+      "message": "El usuario se ha eliminado con exito"
+    }
+  },
+  {
+    "name": "Eliminar project",
+    "link": "/api/v1/projects/:id",
+    "description": "Eliminar registro de proyecto; Permisos: Usuarios autenticados, Usuarios validados en proyecto, Usuarios administradores de proyecto",
+    "type": "DELETE",
+    "body": [],
+    "headers": [
+      ["Authorization", "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjo2LCJ1cGRhdGVkX2F0IjoiMjAyMC0xMC0wNFQyMjowMDozMi4wNTdaIiwiY3JlYXRlZF9hdCI6IjIwMjAtMTAtMDRUMjI6MDA6MzIuMDU3WiIsIm5hbWUiOiJUeWxlciBEdXJkZW4iLCJlbWFpbCI6InRyYXZpc0BlbWFpbC5jb20iLCJwYXNzd29yZCI6IiQyYiQxMCQ5SndndVNsSC9TY09PbW1yeEovMExPOHBFR2FYWlhHenIxWVFaL2JhbmphRllLR3QuWVVJTyIsImltZyI6Ii9pbWFnZXMvZGVmYXVsdC5wbmciLCJ2ZXJpZnkiOnRydWUsImFjdGl2ZSI6dHJ1ZX0sImlhdCI6MTYwMTg0ODk2MSwiZXhwIjoxNjAyMDIxNzYxLCJhdWQiOiJodHRwOi8vbXlzb2Z0Y29ycC5pbiIsImlzcyI6Ik15c29mdCBjb3JwIiwic3ViIjoic29tZUB1c2VyLmNvbSJ9.LgE6OpCK5bJgEPGMwgEgYtjQ-_-xp5Gax53PSL2TuwBsJWynrM_ucwduGnIFbG4lfHK5_NOSG8LZIjgk1BE4Ng"]
+    ],
+    "json": {
+      "ok": true,
+      "message": "El proyecto se ha eliminado con exito"
+    }
+  },
+  {
+    "name": "Eliminar message",
+    "link": "/api/v1/messages/:id",
+    "description": "Eliminar registro de mensaje; Permisos: Usuarios autenticados, Usuarios validados en proyecto",
+    "type": "DELETE",
+    "body": [],
+    "headers": [
+      ["Authorization", "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjo2LCJ1cGRhdGVkX2F0IjoiMjAyMC0xMC0wNFQyMjowMDozMi4wNTdaIiwiY3JlYXRlZF9hdCI6IjIwMjAtMTAtMDRUMjI6MDA6MzIuMDU3WiIsIm5hbWUiOiJUeWxlciBEdXJkZW4iLCJlbWFpbCI6InRyYXZpc0BlbWFpbC5jb20iLCJwYXNzd29yZCI6IiQyYiQxMCQ5SndndVNsSC9TY09PbW1yeEovMExPOHBFR2FYWlhHenIxWVFaL2JhbmphRllLR3QuWVVJTyIsImltZyI6Ii9pbWFnZXMvZGVmYXVsdC5wbmciLCJ2ZXJpZnkiOnRydWUsImFjdGl2ZSI6dHJ1ZX0sImlhdCI6MTYwMTg0ODk2MSwiZXhwIjoxNjAyMDIxNzYxLCJhdWQiOiJodHRwOi8vbXlzb2Z0Y29ycC5pbiIsImlzcyI6Ik15c29mdCBjb3JwIiwic3ViIjoic29tZUB1c2VyLmNvbSJ9.LgE6OpCK5bJgEPGMwgEgYtjQ-_-xp5Gax53PSL2TuwBsJWynrM_ucwduGnIFbG4lfHK5_NOSG8LZIjgk1BE4Ng"]
+    ],
+    "json": {
+      "ok": true,
+      "message": "El mensaje se ha eliminado con exito"
+    }
+  },
+  {
+    "name": "Eliminar event",
+    "link": "/api/v1/events/:id",
+    "description": "Eliminar registro de evento; Permisos: Usuarios autenticados, Usuarios validados en proyecto, Usuarios administradores de proyecto",
+    "type": "DELETE",
+    "body": [],
+    "headers": [
+      ["Authorization", "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjo2LCJ1cGRhdGVkX2F0IjoiMjAyMC0xMC0wNFQyMjowMDozMi4wNTdaIiwiY3JlYXRlZF9hdCI6IjIwMjAtMTAtMDRUMjI6MDA6MzIuMDU3WiIsIm5hbWUiOiJUeWxlciBEdXJkZW4iLCJlbWFpbCI6InRyYXZpc0BlbWFpbC5jb20iLCJwYXNzd29yZCI6IiQyYiQxMCQ5SndndVNsSC9TY09PbW1yeEovMExPOHBFR2FYWlhHenIxWVFaL2JhbmphRllLR3QuWVVJTyIsImltZyI6Ii9pbWFnZXMvZGVmYXVsdC5wbmciLCJ2ZXJpZnkiOnRydWUsImFjdGl2ZSI6dHJ1ZX0sImlhdCI6MTYwMTg0ODk2MSwiZXhwIjoxNjAyMDIxNzYxLCJhdWQiOiJodHRwOi8vbXlzb2Z0Y29ycC5pbiIsImlzcyI6Ik15c29mdCBjb3JwIiwic3ViIjoic29tZUB1c2VyLmNvbSJ9.LgE6OpCK5bJgEPGMwgEgYtjQ-_-xp5Gax53PSL2TuwBsJWynrM_ucwduGnIFbG4lfHK5_NOSG8LZIjgk1BE4Ng"]
+    ],
+    "json": {
+      "ok": true,
+      "message": "El evento se ha eliminado con exito"
+    }
+  },
+  {
+    "name": "Eliminar task",
+    "link": "/api/v1/tasks/:id",
+    "description": "Eliminar registro de tarea; Permisos: Usuarios autenticados, Usuarios validados en proyecto, Usuarios administradores de proyecto",
+    "type": "DELETE",
+    "body": [],
+    "headers": [
+      ["Authorization", "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjo2LCJ1cGRhdGVkX2F0IjoiMjAyMC0xMC0wNFQyMjowMDozMi4wNTdaIiwiY3JlYXRlZF9hdCI6IjIwMjAtMTAtMDRUMjI6MDA6MzIuMDU3WiIsIm5hbWUiOiJUeWxlciBEdXJkZW4iLCJlbWFpbCI6InRyYXZpc0BlbWFpbC5jb20iLCJwYXNzd29yZCI6IiQyYiQxMCQ5SndndVNsSC9TY09PbW1yeEovMExPOHBFR2FYWlhHenIxWVFaL2JhbmphRllLR3QuWVVJTyIsImltZyI6Ii9pbWFnZXMvZGVmYXVsdC5wbmciLCJ2ZXJpZnkiOnRydWUsImFjdGl2ZSI6dHJ1ZX0sImlhdCI6MTYwMTg0ODk2MSwiZXhwIjoxNjAyMDIxNzYxLCJhdWQiOiJodHRwOi8vbXlzb2Z0Y29ycC5pbiIsImlzcyI6Ik15c29mdCBjb3JwIiwic3ViIjoic29tZUB1c2VyLmNvbSJ9.LgE6OpCK5bJgEPGMwgEgYtjQ-_-xp5Gax53PSL2TuwBsJWynrM_ucwduGnIFbG4lfHK5_NOSG8LZIjgk1BE4Ng"]
+    ],
+    "json": {
+      "ok": true,
+      "message": "La tarea se ha eliminado con exito"
+    }
+  },
+  {
+    "name": "Eliminar users-project",
+    "link": "/api/v1/user-products/:idUser/:idProject",
+    "description": "Eliminar relacion entre usuario y proyecto; Permisos: Usuarios autenticados, Usuarios validados en proyecto",
+    "type": "DELETE",
+    "body": [],
+    "headers": [
+      ["Authorization", "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjo2LCJ1cGRhdGVkX2F0IjoiMjAyMC0xMC0wNFQyMjowMDozMi4wNTdaIiwiY3JlYXRlZF9hdCI6IjIwMjAtMTAtMDRUMjI6MDA6MzIuMDU3WiIsIm5hbWUiOiJUeWxlciBEdXJkZW4iLCJlbWFpbCI6InRyYXZpc0BlbWFpbC5jb20iLCJwYXNzd29yZCI6IiQyYiQxMCQ5SndndVNsSC9TY09PbW1yeEovMExPOHBFR2FYWlhHenIxWVFaL2JhbmphRllLR3QuWVVJTyIsImltZyI6Ii9pbWFnZXMvZGVmYXVsdC5wbmciLCJ2ZXJpZnkiOnRydWUsImFjdGl2ZSI6dHJ1ZX0sImlhdCI6MTYwMTg0ODk2MSwiZXhwIjoxNjAyMDIxNzYxLCJhdWQiOiJodHRwOi8vbXlzb2Z0Y29ycC5pbiIsImlzcyI6Ik15c29mdCBjb3JwIiwic3ViIjoic29tZUB1c2VyLmNvbSJ9.LgE6OpCK5bJgEPGMwgEgYtjQ-_-xp5Gax53PSL2TuwBsJWynrM_ucwduGnIFbG4lfHK5_NOSG8LZIjgk1BE4Ng"]
+    ],
+    "json": {
+      "ok": true,
+      "message": "La relacion se elimino con exito"
+    }
+  },
+  {
+    "name": "Eliminar users-task",
+    "link": "/api/v1/user-tasks/:userId/:projectId",
+    "description": "Eliminar relacion entre usuario y tarea; Permisos: Usuarios autenticados, Usuarios validados en proyecto, Usuarios administradores de proyecto",
+    "type": "DELETE",
+    "body": [],
+    "headers": [
+      ["Authorization", "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjo2LCJ1cGRhdGVkX2F0IjoiMjAyMC0xMC0wNFQyMjowMDozMi4wNTdaIiwiY3JlYXRlZF9hdCI6IjIwMjAtMTAtMDRUMjI6MDA6MzIuMDU3WiIsIm5hbWUiOiJUeWxlciBEdXJkZW4iLCJlbWFpbCI6InRyYXZpc0BlbWFpbC5jb20iLCJwYXNzd29yZCI6IiQyYiQxMCQ5SndndVNsSC9TY09PbW1yeEovMExPOHBFR2FYWlhHenIxWVFaL2JhbmphRllLR3QuWVVJTyIsImltZyI6Ii9pbWFnZXMvZGVmYXVsdC5wbmciLCJ2ZXJpZnkiOnRydWUsImFjdGl2ZSI6dHJ1ZX0sImlhdCI6MTYwMTg0ODk2MSwiZXhwIjoxNjAyMDIxNzYxLCJhdWQiOiJodHRwOi8vbXlzb2Z0Y29ycC5pbiIsImlzcyI6Ik15c29mdCBjb3JwIiwic3ViIjoic29tZUB1c2VyLmNvbSJ9.LgE6OpCK5bJgEPGMwgEgYtjQ-_-xp5Gax53PSL2TuwBsJWynrM_ucwduGnIFbG4lfHK5_NOSG8LZIjgk1BE4Ng"]
+    ],
+    "json": {
+      "ok": true,
+      "message": "La relacion se elimino con exito"
+    }
+  },
+  {
+    "name": "Eliminar img",
+    "link": "/api/v1/files/users/:id",
+    "description": "Eliminar archivo de servidor de Dropbox; Permisos: Usuarios autenticados",
+    "type": "DELETE",
+    "body": [],
+    "headers": [
+      ["Authorization", "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjo2LCJ1cGRhdGVkX2F0IjoiMjAyMC0xMC0wNFQyMjowMDozMi4wNTdaIiwiY3JlYXRlZF9hdCI6IjIwMjAtMTAtMDRUMjI6MDA6MzIuMDU3WiIsIm5hbWUiOiJUeWxlciBEdXJkZW4iLCJlbWFpbCI6InRyYXZpc0BlbWFpbC5jb20iLCJwYXNzd29yZCI6IiQyYiQxMCQ5SndndVNsSC9TY09PbW1yeEovMExPOHBFR2FYWlhHenIxWVFaL2JhbmphRllLR3QuWVVJTyIsImltZyI6Ii9pbWFnZXMvZGVmYXVsdC5wbmciLCJ2ZXJpZnkiOnRydWUsImFjdGl2ZSI6dHJ1ZX0sImlhdCI6MTYwMTg0ODk2MSwiZXhwIjoxNjAyMDIxNzYxLCJhdWQiOiJodHRwOi8vbXlzb2Z0Y29ycC5pbiIsImlzcyI6Ik15c29mdCBjb3JwIiwic3ViIjoic29tZUB1c2VyLmNvbSJ9.LgE6OpCK5bJgEPGMwgEgYtjQ-_-xp5Gax53PSL2TuwBsJWynrM_ucwduGnIFbG4lfHK5_NOSG8LZIjgk1BE4Ng"]
+    ],
+    "json": {
+      "ok": true,
+      "message": "La imagen se elimino con exito",
+      "data": "INFO DROPBOX"
+    }
+  },
+  {
+    "name": "Desactivar usuario",
+    "link": "/app/v1/user/:id/inactive",
+    "description": "Desactivar cuanta de usuario; Permisos: Usuarios autenticados",
+    "type": "DELETE",
+    "body": [],
+    "headers": [
+      ["Authorization", "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjo2LCJ1cGRhdGVkX2F0IjoiMjAyMC0xMC0wNFQyMjowMDozMi4wNTdaIiwiY3JlYXRlZF9hdCI6IjIwMjAtMTAtMDRUMjI6MDA6MzIuMDU3WiIsIm5hbWUiOiJUeWxlciBEdXJkZW4iLCJlbWFpbCI6InRyYXZpc0BlbWFpbC5jb20iLCJwYXNzd29yZCI6IiQyYiQxMCQ5SndndVNsSC9TY09PbW1yeEovMExPOHBFR2FYWlhHenIxWVFaL2JhbmphRllLR3QuWVVJTyIsImltZyI6Ii9pbWFnZXMvZGVmYXVsdC5wbmciLCJ2ZXJpZnkiOnRydWUsImFjdGl2ZSI6dHJ1ZX0sImlhdCI6MTYwMTg0ODk2MSwiZXhwIjoxNjAyMDIxNzYxLCJhdWQiOiJodHRwOi8vbXlzb2Z0Y29ycC5pbiIsImlzcyI6Ik15c29mdCBjb3JwIiwic3ViIjoic29tZUB1c2VyLmNvbSJ9.LgE6OpCK5bJgEPGMwgEgYtjQ-_-xp5Gax53PSL2TuwBsJWynrM_ucwduGnIFbG4lfHK5_NOSG8LZIjgk1BE4Ng"]
+    ],
+    "json": {
+      "ok": true,
+      "message": "El usuario se ha eliminado con exito"
+    }
   }
-
 ]
