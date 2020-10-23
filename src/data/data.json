@@ -486,7 +486,7 @@
     }
   },
   {
-    "name": "Tasks por hora 1",
+    "name": "Tasks por fecha 1",
     "link": "/api/v1/projects/:id/task-time-end?time_end=:time_end",
     "description": "Mostrar todas las tareas mayores al parametro :time_end; Permisos: Usuarios autenticados, Usuarios validados en proyecto",
     "type": "GET",
@@ -507,7 +507,7 @@
     }]
   },
   {
-    "name": "Tasks por hora 2",
+    "name": "Tasks por fecha 2",
     "link": "/api/v1/projects/:id/tasks?time_end=:time_end&status=:status&user_id=:user_id",
     "description": "Mostrar todas las tareas que pertenecen a un proyecto y que sean mayor que el parámetro :time_end. administrar su :status, si es 'major': mostrará todas las tareas mayores al :time_end; si es 'equal': mostrará todas las tareas iguales al :time_end . Permisos: Usuarios autenticados, Usuarios validados en proyecto",
     "type": "GET",
