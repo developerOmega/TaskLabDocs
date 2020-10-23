@@ -486,6 +486,52 @@
     }
   },
   {
+    "name": "Tasks por hora 1",
+    "link": "/api/v1/projects/:id/task-time-end?time_end=:time_end",
+    "description": "Mostrar todas las tareas mayores al parametro :time_end; Permisos: Usuarios autenticados, Usuarios validados en proyecto",
+    "type": "GET",
+    "body": [],
+    "headers": [
+      ["Authorization", "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjo2LCJ1cGRhdGVkX2F0IjoiMjAyMC0xMC0wNFQyMjowMDozMi4wNTdaIiwiY3JlYXRlZF9hdCI6IjIwMjAtMTAtMDRUMjI6MDA6MzIuMDU3WiIsIm5hbWUiOiJUeWxlciBEdXJkZW4iLCJlbWFpbCI6InRyYXZpc0BlbWFpbC5jb20iLCJwYXNzd29yZCI6IiQyYiQxMCQ5SndndVNsSC9TY09PbW1yeEovMExPOHBFR2FYWlhHenIxWVFaL2JhbmphRllLR3QuWVVJTyIsImltZyI6Ii9pbWFnZXMvZGVmYXVsdC5wbmciLCJ2ZXJpZnkiOnRydWUsImFjdGl2ZSI6dHJ1ZX0sImlhdCI6MTYwMTg0ODk2MSwiZXhwIjoxNjAyMDIxNzYxLCJhdWQiOiJodHRwOi8vbXlzb2Z0Y29ycC5pbiIsImlzcyI6Ik15c29mdCBjb3JwIiwic3ViIjoic29tZUB1c2VyLmNvbSJ9.LgE6OpCK5bJgEPGMwgEgYtjQ-_-xp5Gax53PSL2TuwBsJWynrM_ucwduGnIFbG4lfHK5_NOSG8LZIjgk1BE4Ng"]
+    ],
+    "json": [{
+      "ok": true,
+      "data": {
+        "id": "INTEGER",
+        "updated_at": "DATE",
+        "created_at": "DATE",
+        "description": "STRING",
+        "status": "ENUM[fine, error, warning, none]",
+        "project_id": "INTEGER"
+      }
+    }]
+  },
+  {
+    "name": "Tasks por hora 2",
+    "link": "/api/v1/projects/:id/tasks?time_end=:time_end&status=:status&user_id=:user_id",
+    "description": "Mostrar todas las tareas que pertenecen a un proyecto y que sean mayor que el parámetro :time_end. administrar su :status, si es 'major': mostrará todas las tareas mayores al :time_end; si es 'equal': mostrará todas las tareas iguales al :time_end . Permisos: Usuarios autenticados, Usuarios validados en proyecto",
+    "type": "GET",
+    "body": [],
+    "headers": [
+      ["Authorization", "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjo2LCJ1cGRhdGVkX2F0IjoiMjAyMC0xMC0wNFQyMjowMDozMi4wNTdaIiwiY3JlYXRlZF9hdCI6IjIwMjAtMTAtMDRUMjI6MDA6MzIuMDU3WiIsIm5hbWUiOiJUeWxlciBEdXJkZW4iLCJlbWFpbCI6InRyYXZpc0BlbWFpbC5jb20iLCJwYXNzd29yZCI6IiQyYiQxMCQ5SndndVNsSC9TY09PbW1yeEovMExPOHBFR2FYWlhHenIxWVFaL2JhbmphRllLR3QuWVVJTyIsImltZyI6Ii9pbWFnZXMvZGVmYXVsdC5wbmciLCJ2ZXJpZnkiOnRydWUsImFjdGl2ZSI6dHJ1ZX0sImlhdCI6MTYwMTg0ODk2MSwiZXhwIjoxNjAyMDIxNzYxLCJhdWQiOiJodHRwOi8vbXlzb2Z0Y29ycC5pbiIsImlzcyI6Ik15c29mdCBjb3JwIiwic3ViIjoic29tZUB1c2VyLmNvbSJ9.LgE6OpCK5bJgEPGMwgEgYtjQ-_-xp5Gax53PSL2TuwBsJWynrM_ucwduGnIFbG4lfHK5_NOSG8LZIjgk1BE4Ng"]
+    ],
+    "json": {
+      "ok": true,
+      "data": [
+        {
+          "id": "INTEGER",
+          "description": "STRING",
+          "status": "ENUM[fine, error, warning, none]",
+          "time_init": "DATE",
+          "time_end": "DATE",
+          "project_id": "INTEGER",
+          "updated_at": "DATE",
+          "created_at": "DATE"
+        }
+      ] 
+    }
+  },
+  {
     "name": "Envent por id",
     "link": "/api/v1/events/:id",
     "description": "Mostrar todos los eventos por parametro id; Permisos: Usuarios autenticados, Usuarios validados en proyecto",
@@ -530,6 +576,27 @@
         "project_id": "INTEGER"
       }
     }
+  },
+  {
+    "name": "Buscar usuario",
+    "link": "/api/v1/users/search/:email",
+    "description": "Buscar usuario por email; Permisos: Usuarios autenticados",
+    "type": "GET",
+    "body": [],
+    "headers": [
+      ["Authorization", "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjo2LCJ1cGRhdGVkX2F0IjoiMjAyMC0xMC0wNFQyMjowMDozMi4wNTdaIiwiY3JlYXRlZF9hdCI6IjIwMjAtMTAtMDRUMjI6MDA6MzIuMDU3WiIsIm5hbWUiOiJUeWxlciBEdXJkZW4iLCJlbWFpbCI6InRyYXZpc0BlbWFpbC5jb20iLCJwYXNzd29yZCI6IiQyYiQxMCQ5SndndVNsSC9TY09PbW1yeEovMExPOHBFR2FYWlhHenIxWVFaL2JhbmphRllLR3QuWVVJTyIsImltZyI6Ii9pbWFnZXMvZGVmYXVsdC5wbmciLCJ2ZXJpZnkiOnRydWUsImFjdGl2ZSI6dHJ1ZX0sImlhdCI6MTYwMTg0ODk2MSwiZXhwIjoxNjAyMDIxNzYxLCJhdWQiOiJodHRwOi8vbXlzb2Z0Y29ycC5pbiIsImlzcyI6Ik15c29mdCBjb3JwIiwic3ViIjoic29tZUB1c2VyLmNvbSJ9.LgE6OpCK5bJgEPGMwgEgYtjQ-_-xp5Gax53PSL2TuwBsJWynrM_ucwduGnIFbG4lfHK5_NOSG8LZIjgk1BE4Ng"]
+    ],
+    "json": [{
+      "id": 3,
+      "name": "Daniel",
+      "email": "daniel@email.com",
+      "password": "$2b$10$GR2Duia9cxOeyX8SIju31ePYFDjZIPRjiIuyh8nP0N2WxNe61aeWi",
+      "img": "https://dl.dropboxusercontent.com/s/wfpdynmtgntg0t8/31602884657231theskip.jpg",
+      "verify": true,
+      "active": true,
+      "updated_at": "2020-10-16T21:44:19.411Z",
+      "created_at": "2020-10-04T21:04:40.966Z"
+    }]
   },
   {
     "name": "Editar user",
